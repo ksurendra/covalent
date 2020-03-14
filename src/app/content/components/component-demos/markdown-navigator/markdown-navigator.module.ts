@@ -11,7 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { setComponentRoutes } from 'app/content/components/components';
 import { ComponentDetailsModule } from 'app/components/shared/component-details/component-details.module';
 
-import { MarkdownNavigatorDemoComponent } from './markdown-navigator.component';
+import { MarkdownNavigatorDemoBasicSharedModule } from './demos/markdown-navigator-demo-basic/markdown-navigator-demo-basic-shared';
+import { MarkdownNavigatorDemoBasicComponent } from './demos//markdown-navigator-demo-basic/markdown-navigator-demo-basic.component';
 import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentCodeEditorModule } from '@covalent/code-editor';
 import { DocumentationToolsModule } from 'app/documentation-tools';
@@ -19,13 +20,13 @@ import { CovalentMarkdownNavigatorModule } from '@covalent/markdown-navigator';
 import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = setComponentRoutes({
-  overviewDemoComponent: MarkdownNavigatorDemoComponent,
+  overviewDemoComponent: MarkdownNavigatorDemoBasicComponent,
   id: 'markdown-navigator',
 });
 
 @NgModule({
-  declarations: [MarkdownNavigatorDemoComponent],
   imports: [
+    MarkdownNavigatorDemoBasicSharedModule,
     CommonModule,
     DocumentationToolsModule,
     // Material

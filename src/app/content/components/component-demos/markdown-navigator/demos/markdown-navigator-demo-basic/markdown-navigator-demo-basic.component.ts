@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IMarkdownNavigatorWindowConfig, IMarkdownNavigatorItem } from '@covalent/markdown-navigator';
 
-import { mdOptions } from './../../markdown-navigator.model';
+import { mdOptions } from './../markdown-navigator.model';
 
 function prettyJson(items: IMarkdownNavigatorItem[]): string {
   return JSON.stringify(items, undefined, 4);
@@ -11,7 +11,6 @@ function prettyJson(items: IMarkdownNavigatorItem[]): string {
   selector: 'markdown-navigator-demo-basic',
   styleUrls: ['./markdown-navigator-demo-basic.component.scss'],
   templateUrl: './markdown-navigator-demo-basic.component.html',
-  preserveWhitespaces: true,
 })
 export class MarkdownNavigatorDemoBasicComponent {
   public options: { name: string; value: IMarkdownNavigatorItem[] }[] = mdOptions;

@@ -5,7 +5,7 @@ import {
   IMarkdownNavigatorItem,
 } from '@covalent/markdown-navigator';
 
-import { mdOptions } from './../../markdown-navigator.model';
+import { mdOptions } from './../markdown-navigator.model';
 
 function prettyJson(items: IMarkdownNavigatorItem[]): string {
   return JSON.stringify(items, undefined, 4);
@@ -15,7 +15,6 @@ function prettyJson(items: IMarkdownNavigatorItem[]): string {
   selector: 'markdown-navigator-demo-editor',
   styleUrls: ['./markdown-navigator-demo-editor.component.scss'],
   templateUrl: './markdown-navigator-demo-editor.component.html',
-  preserveWhitespaces: true,
 })
 export class MarkdownNavigatorDemoEditorComponent {
   public currentTree: IMarkdownNavigatorItem[] = mdOptions[0].value;
@@ -41,13 +40,13 @@ export class MarkdownNavigatorDemoEditorComponent {
     }
   }
 
-  public applyInput(): void {
+  public openMultiLevel(): void {
     this.startAt = undefined;
     this.use(JSON.parse(this.input));
     this.openWindow();
   }
 
-  public demoStartAt(): void {
+  public goToTdLoading(): void {
     this.startAt = { title: 'tdLoading' };
     this.use(JSON.parse(JSON.stringify(mdOptions[0].value)));
     this.openWindow();

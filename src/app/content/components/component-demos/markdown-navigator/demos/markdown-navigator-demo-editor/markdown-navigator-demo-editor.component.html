@@ -1,22 +1,8 @@
-
-<div class="push-bottom" layout-xs='column' layout-sm="column" layout-gt-sm='row' layout-align='center center' [style.height.px]="450">
-  <div layout='column' flex="40" flex-xs='100' flex-order='2'flex-order-gt-sm='1' class='pad-bottom-lg'>
-    <div class="pad-top push-bottom">
-      <button mat-raised-button class="text-upper" color="primary" (click)="applyInput()">Try</button>
-      <span class="mat-hint">Try the markdown and open in a dialog</span>
-    </div>
-    <div>
-      <button mat-raised-button class="text-upper" color="primary" (click)="demoStartAt()">Jump</button>
-      <span class="mat-hint">Jump to an item in the markdown</span>
-    </div>
+<div layout-xs="column" layout-gt-xs="row" layout-align="center center">
+  <div layout="column">
+    <button mat-raised-button color="primary" (click)="openMultiLevel()">Open Multi-Level</button>
+    <button mat-raised-button color="primary" (click)="goToTdLoading()">Go To tdLoading</button>
   </div>
-  <div class='mat-card overflow-scroll' layout='column' flex="60" flex-order-sm='1'  flex-order-xs='1' flex-order-gt-sm='2'>
-    <td-code-editor
-      flex
-      [language]="'json'"
-      [editorOptions]="{ minimap: { enabled: false } }"
-      [(ngModel)]="input"
-      [style.height.px]="450"
-    ></td-code-editor>
-  </div>
+  <td-code-editor class="mat-card mat-elevation-z4 overflow-scroll demo-editor" [language]="'json'" [editorOptions]="{ readOnly: true, minimap: { enabled: false } }"
+    [(ngModel)]="input"></td-code-editor>
 </div>

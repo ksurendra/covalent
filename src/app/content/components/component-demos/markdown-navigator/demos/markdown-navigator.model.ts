@@ -40,8 +40,5 @@ export const multiLevelTree: IMarkdownNavigatorItem[] = [
 export const mdOptions: { name: string; value: IMarkdownNavigatorItem[] }[] = [
   { name: 'Multi-level', value: multiLevelTree },
   { name: 'Bi-level', value: biLevelTree },
-  {
-    name: 'Single-level',
-    value: singleLevelTree,
-  },
+  { name: 'Single-level', value: singleLevelTree },
 ];
