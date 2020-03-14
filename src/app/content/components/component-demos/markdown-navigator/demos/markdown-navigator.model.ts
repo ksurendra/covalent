@@ -1,11 +1,11 @@
 import { IMarkdownNavigatorItem } from '@covalent/markdown-navigator';
 
-export const singleLevelTree: IMarkdownNavigatorItem[] = [
+const singleLevelTree: IMarkdownNavigatorItem[] = [
   {
     url: 'https://github.com/Teradata/covalent/blob/develop/README.md',
   },
 ];
-export const biLevelTree: IMarkdownNavigatorItem[] = [
+const biLevelTree: IMarkdownNavigatorItem[] = [
   {
     url: 'https://github.com/Teradata/covalent/blob/develop/README.md',
     title: 'Covalent',
@@ -19,7 +19,7 @@ export const biLevelTree: IMarkdownNavigatorItem[] = [
     title: 'Raw markdown',
   },
 ];
-export const multiLevelTree: IMarkdownNavigatorItem[] = [
+const multiLevelTree: IMarkdownNavigatorItem[] = [
   {
     title: 'Covalent',
     children: [
