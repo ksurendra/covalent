@@ -215,12 +215,16 @@ export class TdMarkdownNavigatorComponent implements OnChanges {
     return '';
   }
 
+  refresh(): void {
+    this.reset();
+    if (this.items && this.startAt) {
+      this._jumpTo(this.startAt);
+    }
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.items) {
-      this.reset();
-      if (this.items && this.startAt) {
-        this._jumpTo(this.startAt);
-      }
+      this.refresh();
     }
   }
 
